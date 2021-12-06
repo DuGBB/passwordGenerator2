@@ -39,21 +39,13 @@ function generatePassword() {//function to generate a random password on criteri
   if (special) {
     combinedArrs = combinedArrs.concat(specialChar);
   };
-  var passwordBuild = "";
-  console.log('--------------------');
-  console.log(pwLength);
+  var passwordBuild = "";//actually builds password on criteria provided by user
   for (let index = 0; index < Math.floor(pwLength); index++) {
     let val = Math.floor(Math.random() * combinedArrs.length);
     console.log(val);
     console.log(combinedArrs[val]);
     passwordBuild = passwordBuild + combinedArrs[val];
   }
-  console.log('--------------------');
-  console.log(combinedArrs);
-  console.log(upper);
-  console.log(lower);
-  console.log(number);
-  console.log(special);
   return passwordBuild;
 }
 
